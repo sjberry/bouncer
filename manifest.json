@@ -1,0 +1,32 @@
+{
+	"name": "Bouncer",
+	"version": "0.0.0",
+	"manifest_version": 2,
+	"description": "A content manager for Chrome that helps protect your privacy and security.",
+	"homepage_url": "http://www.sberry.me",
+	"icons": {
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	},
+	"default_locale": "en",
+
+	"background": {
+		"scripts": [
+			"src/background/background.js"
+		],
+		"persistent": false
+	},
+	"options_page": "src/options/index.html",
+	"browser_action": {
+		"default_icon": "icons/icon16.png",
+		"default_title": "Bouncer",
+		"default_popup": "src/browser_action/index.html"
+	},
+
+	"permissions": [
+		"activeTab",
+		"contentSettings",
+		"cookies"
+	]
+}
