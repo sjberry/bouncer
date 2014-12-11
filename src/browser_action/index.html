@@ -11,36 +11,43 @@
 	</head>
 
 	<body>
-		<section class="popup">
+		<section id="rulegen" class="popup center">
 			<div>
 				<a id="rule" class="trigger" href="" data-type="save"></a>
 			</div>
 
-			<div class="table centered">
-				<div>
-					<div>
-						<input id="domain-slider" type="range" min="0" value="0" max="3" step="1" disabled />
-					</div>
-					<div>
-						<input id="site-slider" type="range" min="0" value="3" max="3" step="1" disabled />
-					</div>
-				</div>
-				<div>
-					<div>
-						Domain
-					</div>
-					<div>
-						Site
-					</div>
-				</div>
+			<div>
+				<input id="domain-slider" type="range" min="0" value="0" max="3" step="1" disabled />
 			</div>
 
-			<div class="center centered">
-				<label><input id="protocol" type="checkbox" /> Include Protocol</label>
+			<div>
+				<label><input id="protocol" type="checkbox" checked /> Include Protocol</label>
 			</div>
 		</section>
 
-		<section class="popup">
+		<section id="permissions" class="popup">
+			<div class="center">
+				<span id="list-type" class="bold">Allow</span>
+			</div>
+
+			<div>
+				<label><input name="rule-cookies" type="checkbox" /> Cookies</label>
+			</div>
+
+			<div>
+				<label><input name="rule-javascript" type="checkbox" /> JavaScript</label>
+			</div>
+
+			<div>
+				<label><input name="rule-plugins" type="checkbox" /> Plugins</label>
+			</div>
+		</section>
+
+		<section class="popup center">
+			<div>
+				<a class="trigger" href="" data-type="clear-cookies">Clear unwanted cookies (<span id="unwanted-cookie-count">0</span> of <span id="total-cookie-count">0</span>).</a>
+			</div>
+
 			<div>
 				<a class="trigger" href="" data-type="options">Show options</a>
 			</div>

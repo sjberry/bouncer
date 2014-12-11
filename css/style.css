@@ -6,15 +6,12 @@
 
 section {
 	margin: 5px;
-	padding: 10px;
+	padding: 7px;
 }
 section.popup:not(:last-child) {
 	border-bottom: 1px solid #CCC;
 }
-section.popup > div {
-	white-space: nowrap;
-	text-align: center;
-}
+section.popup > div { white-space: nowrap; }
 
 label,
 input[type="checkbox"] {
@@ -49,5 +46,6 @@ a:hover { text-decoration: underline; }
 	margin-right: auto !important;
 }
 .full-width { width: 100%; }
+.bold { font-weight: bold; }
 
 
