@@ -41,6 +41,8 @@ $(document).ready(function() {
 		match = /^([^:\/?#]+:\/\/)?([^\/?#]*)?(?:\/([^?#]*))?/.exec(tab.url);
 		protocol = match[1];
 
+		console.log(protocol);
+
 		if (/^https?:\/\/$/.test(protocol)) {
 			authority = match[2];
 
@@ -85,7 +87,20 @@ $(document).ready(function() {
 			});
 		}
 		else {
-			$('#main').html('<div>Bouncer only supports <b>http</b> and <b>https</b> protocols.</div>');
+			$(document.body).width(400);
+
+			$('#rulegen').html('<p>Bouncer only supports <b>http</b> and <b>https</b> protocols.</p>');
+
+			switch(protocol) {
+				case 'chrome://':
+					$('#rulegen').append('<p>It looks like you\'re on a safe, built-in Chrome page.</p>');
+					break;
+				case 'chrome-extension://':
+					$('#rulegen').append('<p>It looks like you\'re on a Chrome extension configuration page.</p>');
+					break;
+			}
+
+			$('#permissions').remove();
 		}
 	}
 

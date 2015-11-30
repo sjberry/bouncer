@@ -13,15 +13,17 @@
 
 	"background": {
 		"scripts": [
-			"src/background/background.js"
+			"lib/lodash/lodash-2.4.1.min.js",
+			"js/storage.js",
+			"views/background/background.js"
 		],
 		"persistent": false
 	},
-	"options_page": "src/options/index.html",
+	"options_page": "views/options/index.html",
 	"browser_action": {
 		"default_icon": "icons/icon16.png",
 		"default_title": "Bouncer",
-		"default_popup": "src/browser_action/index.html"
+		"default_popup": "views/browser_action/index.html"
 	},
 
 	"permissions": [
